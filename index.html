@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Times - Wimbledon Mosque</title>
+    
+    <!-- Enhanced PWA Meta Tags -->
+    <meta name="theme-color" content="#0c4a6e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Prayer Times">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Simplified Icons -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiByeD0iMjAiIGZpbGw9IiMwYzRhNmUiLz4KPHN2ZyB4PSI5MCIgeT0iOTAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CjxwYXRoIGQ9Ik0xMiAybC0xIDEuNWMtLjUtLjUtMS4zLS41LTEuOCAwbC0xLTEuNWMtLjUtLjUtMS4zLS41LTEuOCAwbC0xIDEuNWMtLjUtLjUtMS4zLS41LTEuOCAwbC0xLTEuNWMtLjUtLjUtMS4zLS41LTEuOCAwbC0xIDEuNWMtLjUtLjUtMS4zLS41LTEuOCAwbC0xLTEuNXptMCAxOGwxLTEuNWMuNS41IDEuMy41IDEuOCAwbDEgMS41Yy41LjUgMS4zLjUgMS44IDBsMS0xLjVjLjUuNSAxLjMuNSAxLjggMGwxIDEuNWMuNS41IDEuMy41IDEuOCAwbDEtMS41Yy41LjUgMS4zLjUgMS44IDBsMS0xLjV6bTQtOWwtMS41IDFjLS41LS41LS41LTEuMyAwLTEuOGwxLjUtMWMuNS0uNS41LTEuMyAwLTEuOGwtMS41IDFjLS41LS41LS41LTEuMyAwLTEuOGwxLjUtMWMuNS0uNS41LTEuMyAwLTEuOGwtMS41IDFjLS41LS41LS41LTEuMyAwLTEuOGwxLjUtMXptLTE2IDBsMS41LTFjLjUuNS41IDEuMyAwIDEuOGwtMS41IDFjLS41LjUtLjUgMS4zIDAgMS44bDEuNS0xYy41LjUuNSAxLjMgMCAxLjhsLTEuNSAxYy0uNS41LS41IDEuMyAwIDEuOGwxLjUtMWMuNS41LjUgMS4zIDAgMS44bC0xLjUgMXoiLz4KPC9zdmc+CjwvZz4KPC9zdmc+">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiByeD0iMjAiIGZpbGw9IiMwYzRhNmUiLz4KPHN2ZyB4PSI5MCIgeT0iOTAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CjxwYXRoIGQ9Ik0xMiAybC0xIDEuNWMtLjUtLjUtMS4zLS41LTEuOCAwbC0xLTEuNWMtLjUtLjUtMS4zLS41LTEuOCAwbC0xIDEuNWMtLjUtLjUtMS4zLS41LTEuOCAwbC0xLTEuNWMtLjUtLjUtMS4zLS41LTEuOCAwbC0xIDEuNWMtLjUtLjUtMS4zLS41LTEuOCAwbC0xLTEuNXptMCAxOGwxLTEuNWMuNS41IDEuMy41IDEuOCAwbDEgMS41Yy41LjUgMS4zLjUgMS44IDBsMS0xLjVjLjUuNSAxLjMuNSAxLjggMGwxIDEuNWMuNS41IDEuMy41IDEuOCAwbDEtMS41Yy41LjUgMS4zLjUgMS44IDBsMS0xLjV6bTQtOWwtMS41IDFjLS41LS41LS41LTEuMyAwLTEuOGwxLjUtMWMuNS0uNS41LTEuMyAwLTEuOGwtMS41IDFjLS41LS41LS41LTEuMyAwLTEuOGwxLjUtMWMuNS0uNS41LTEuMyAwLTEuOGwtMS41IDFjLS41LS41LS41LTEuMyAwLTEuOGwxLjUtMXptLTE2IDBsMS41LTFjLjUuNS41IDEuMyAwIDEuOGwtMS41IDFjLS41LjUtLjUgMS4zIDAgMS44bDEuNS0xYy41LjUuNSAxLjMgMCAxLjhsLTEuNSAxYy0uNS41LS41IDEuMyAwIDEuOGwxLjUtMWMuNS41LjUgMS4zIDAgMS44bC0xLjUgMXoiLz4KPC9zdmc+CjwvZz4KPC9zdmc+">
+    
+    <!-- Enhanced Manifest -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIldpbWJsZWRvbiBNb3NxdWUgLSBQcmF5ZXIgVGltZXMiLAogICJzaG9ydF9uYW1lIjogIlByYXllciBUaW1lcyIsCiAgImRlc2NyaXB0aW9uIjogIkRhaWx5IHByYXllciB0aW1lcyBmb3IgV2ltYmxlZG9uIE1vc3F1ZSIsCiAgInN0YXJ0X3VybCI6ICIuLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzBjNGE2ZSIsCiAgInRoZW1lX2NvbG9yIjogIiMwYzRhNmUiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjNhV1IwYUQwaU1UZ3dJaUJvWldsbmFIUTlJakU0TUNJZ2RtbGxkMEp2ZUQwaU1DQXdJREU0TUNBNE1EZ2lJR1pwYkd3OUltNXZibVVpSUhodGJHNXpQU0pvZEhSd09pOHZkM2QzTG5jekxtOXlaUzh5TURBd0wzTjJaeUkrQ2p4eVpXTjBJSGRwWkhSb1BTST1NVGN3SWlCb1pXbG5hSFE5SWpFM01DSWdablJsYkdRNVVuQmxaejB3U1E9PSIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIKICAgIH0sCiAgICB7CiAgICAgICJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCM2FXUjBhRDBpTlRFeUlpQm9aV2xuYUhROU5VRXlJaUJrYVdac01EQXhJREF6TkRFM01EQWlJR1pwYkd3OUltNXZibVVpSUhodGJHNXpQU0pvZEhSd09pOHZkM2QzTG5jekxtOXlaUzh5TURBd0wyVnVhblJoSkhCaGRHZ2lNa1VuYWc9PSIsCiAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIKICAgIH0KICBdCn0=">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0284c7 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: white;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .mosque-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .date {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .greeting {
+            font-size: 0.85rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .current-prayer {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .current-prayer-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .current-prayer-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .current-prayer-time {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .next-prayer-info {
+            font-size: 0.8rem;
+            margin-top: 8px;
+            opacity: 0.8;
+        }
+
+        .prayer-times {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .prayer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .prayer-row:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .prayer-row.active {
+            background: rgba(34, 197, 94, 0.3);
+            border: 2px solid rgba(34, 197, 94, 0.5);
+        }
+
+        .prayer-name {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .prayer-times-container {
+            text-align: right;
+        }
+
+        .begins-time {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 2px;
+        }
+
+        .jamat-time {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .time-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+            font-weight: 500;
+        }
+
+        .jumuah-notice {
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid rgba(255, 193, 7, 0.4);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .jumuah-notice h3 {
+            color: #fbbf24;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .jumuah-notice p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .install-prompt {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            z-index: 1000;
+            display: none;
+        }
+
+        .install-prompt.show {
+            display: block;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .install-btn {
+            background: #0369a1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 0 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .dismiss-btn {
+            background: #6b7280;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 0 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .mosque-name {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="mosque-name">🕌 Wimbledon Mosque</div>
+            <div class="date" id="currentDate"></div>
+            <div class="greeting">As-Salamu Alaikum</div>
+        </div>
+
+        <div class="current-prayer" id="currentPrayerCard">
+            <div class="current-prayer-label">Current Prayer</div>
+            <div class="current-prayer-name" id="currentPrayerName">Zuhr</div>
+            <div class="current-prayer-time" id="currentPrayerTime">1:30 PM</div>
+            <div class="next-prayer-info" id="nextPrayerInfo">Next: Asr at 7:00 PM</div>
+        </div>
+
+        <div class="time-labels">
+            <span>Prayer</span>
+            <div style="display: flex; gap: 30px;">
+                <span>Begins</span>
+                <span>Jamat</span>
+            </div>
+        </div>
+
+        <div class="prayer-times" id="prayerTimes">
+            <!-- Prayer times will be populated by JavaScript -->
+        </div>
+
+        <div class="jumuah-notice">
+            <h3>📅 Jumuah Friday</h3>
+            <p>1:30 PM - Summer Time<br>
+            English talk: 1:00 PM<br>
+            Khutba & Prayer: 1:30 PM</p>
+        </div>
+
+        <div class="footer">
+            <p>🌐 wimbledonmosque.org</p>
+        </div>
+    </div>
+
+    <!-- Install prompt -->
+    <div class="install-prompt" id="installPrompt">
+        <p style="margin: 0 0 10px 0; font-size: 14px;">📱 Add Prayer Times to your home screen for quick access!</p>
+        <button class="install-btn" onclick="installPWA()">Add to Home Screen</button>
+        <button class="dismiss-btn" onclick="dismissPrompt()">Later</button>
+    </div>
+
+    <script>
+        // Prayer times data
+        const prayerTimes = [
+            { name: 'Fajr', begins: '2:46', jamat: '4:00', icon: '🌅' },
+            { name: 'Sunrise', begins: '4:45', jamat: '', icon: '☀️' },
+            { name: 'Zuhr', begins: '13:08', jamat: '13:30', icon: '🌞' },
+            { name: 'Asr', begins: '18:41', jamat: '19:00', icon: '🌤️' },
+            { name: 'Maghrib', begins: '21:25', jamat: '21:25', icon: '🌅' },
+            { name: 'Isha', begins: '22:32', jamat: '22:45', icon: '🌙' }
+        ];
+
+        function formatTime(time24) {
+            if (!time24) return '';
+            const [hours, minutes] = time24.split(':');
+            const hour12 = parseInt(hours) % 12 || 12;
+            const ampm = parseInt(hours) >= 12 ? 'PM' : 'AM';
+            return `${hour12}:${minutes} ${ampm}`;
+        }
+
+        function getCurrentDate() {
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            return new Date().toLocaleDateString('en-UK', options);
+        }
+
+        function getCurrentPrayer() {
+            const now = new Date();
+            const currentTime = now.getHours() * 60 + now.getMinutes();
+            
+            const prayerMinutes = prayerTimes.map(prayer => {
+                if (prayer.begins) {
+                    const [hours, minutes] = prayer.begins.split(':');
+                    return {
+                        ...prayer,
+                        minutes: parseInt(hours) * 60 + parseInt(minutes)
+                    };
+                }
+                return { ...prayer, minutes: -1 };
+            }).filter(prayer => prayer.minutes !== -1);
+
+            let currentPrayer = prayerMinutes[0];
+            let nextPrayer = prayerMinutes[1];
+
+            for (let i = 0; i < prayerMinutes.length - 1; i++) {
+                if (currentTime >= prayerMinutes[i].minutes && currentTime < prayerMinutes[i + 1].minutes) {
+                    currentPrayer = prayerMinutes[i];
+                    nextPrayer = prayerMinutes[i + 1];
+                    break;
+                } else if (currentTime >= prayerMinutes[prayerMinutes.length - 1].minutes) {
+                    currentPrayer = prayerMinutes[prayerMinutes.length - 1];
+                    nextPrayer = prayerMinutes[0];
+                    break;
+                }
+            }
+
+            return { currentPrayer, nextPrayer };
+        }
+
+        function updateCurrentPrayer() {
+            const { currentPrayer, nextPrayer } = getCurrentPrayer();
+            
+            document.getElementById('currentPrayerName').textContent = `${currentPrayer.icon} ${currentPrayer.name}`;
+            document.getElementById('currentPrayerTime').textContent = currentPrayer.jamat ? 
+                `Jamat: ${formatTime(currentPrayer.jamat)}` : 
+                `${formatTime(currentPrayer.begins)}`;
+            
+            const nextTime = nextPrayer.jamat || nextPrayer.begins;
+            document.getElementById('nextPrayerInfo').textContent = 
+                `Next: ${nextPrayer.name} at ${formatTime(nextTime)}`;
+        }
+
+        function renderPrayerTimes() {
+            const container = document.getElementById('prayerTimes');
+            const { currentPrayer } = getCurrentPrayer();
+            
+            container.innerHTML = prayerTimes.map(prayer => {
+                const isActive = prayer.name === currentPrayer.name;
+                const jamaatDisplay = prayer.jamat ? formatTime(prayer.jamat) : '—';
+                
+                return `
+                    <div class="prayer-row ${isActive ? 'active' : ''}">
+                        <div class="prayer-name">${prayer.icon} ${prayer.name}</div>
+                        <div class="prayer-times-container">
+                            <div class="begins-time">${formatTime(prayer.begins)}</div>
+                            <div class="jamat-time">${jamaatDisplay}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateWidget() {
+            document.getElementById('currentDate').textContent = getCurrentDate();
+            updateCurrentPrayer();
+            renderPrayerTimes();
+        }
+
+        // PWA functionality
+        let deferredPrompt;
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // Show custom install prompt after 3 seconds
+            setTimeout(() => {
+                if (!localStorage.getItem('installPromptDismissed')) {
+                    document.getElementById('installPrompt').classList.add('show');
+                }
+            }, 3000);
+        });
+
+        function installPWA() {
+            const installPrompt = document.getElementById('installPrompt');
+            installPrompt.classList.remove('show');
+            
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    }
+                    deferredPrompt = null;
+                });
+            } else {
+                // Manual instructions for browsers that don't support automatic install
+                alert('To add to home screen:\n\n1. Tap the menu (⋮) in your browser\n2. Look for "Add to Home screen" or "Install app"\n3. Tap "Add" or "Install"');
+            }
+        }
+
+        function dismissPrompt() {
+            document.getElementById('installPrompt').classList.remove('show');
+            localStorage.setItem('installPromptDismissed', 'true');
+        }
+
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('data:application/javascript;base64,' + btoa(`
+                const CACHE_NAME = 'prayer-times-v2';
+                const urlsToCache = ['/'];
+                
+                self.addEventListener('install', function(event) {
+                    event.waitUntil(
+                        caches.open(CACHE_NAME)
+                            .then(function(cache) {
+                                return cache.addAll(urlsToCache);
+                            })
+                    );
+                });
+                
+                self.addEventListener('fetch', function(event) {
+                    event.respondWith(
+                        caches.match(event.request)
+                            .then(function(response) {
+                                if (response) {
+                                    return response;
+                                }
+                                return fetch(event.request);
+                            }
+                        )
+                    );
+                });
+            `));
+        }
+
+        // Initialize
+        updateWidget();
+        setInterval(updateWidget, 60000);
+
+        // Make functions globally accessible
+        window.installPWA = installPWA;
+        window.dismissPrompt = dismissPrompt;
+
+        // Show manual install hint for mobile users
+        if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            if (!window.matchMedia('(display-mode: standalone)').matches) {
+                setTimeout(() => {
+                    if (!localStorage.getItem('installPromptDismissed') && !deferredPrompt) {
+                        document.getElementById('installPrompt').classList.add('show');
+                    }
+                }, 5000);
+            }
+        }
+    </script>
+</body>
+</html>
