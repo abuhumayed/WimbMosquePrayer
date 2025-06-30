@@ -18,10 +18,12 @@ Dark/Light Mode: Automatic theme switching with user preference persistence
 Offline Support: Service worker implementation for offline functionality
 Date Navigation: Browse prayer times for any date
 Live Clock: Real-time display with automatic updates
+
 📱 Quick Start
 Visit: wimbledon-mosque-times.vercel.app
 Install: Tap "Add to Home Screen" for app-like experience
 Use: Access prayer times instantly from your home screen
+
 🛠️ Technical Stack
 Framework: Next.js 15 with App Router
 Language: TypeScript
@@ -30,6 +32,8 @@ Icons: Lucide React
 PWA: Custom service worker implementation
 Deployment: Vercel
 Performance: Optimized with React 19 features
+
+
 📱 PWA Features
 Installable: Add to home screen on iOS/Android
 Offline Capable: Works without internet connection
@@ -53,18 +57,21 @@ src/
 └── public/               # Static assets
     ├── manifest.json     # PWA manifest
     └── sw.js            # Service worker
+
 🎨 Design Features
 Custom Mosque Logo: SVG-based scalable branding
 Islamic Color Palette: Green and gold theme reflecting Islamic aesthetics
 Accessibility: WCAG compliant with proper ARIA labels
 Typography: System fonts for optimal performance
 Animations: Smooth transitions and micro-interactions
+
 📊 Performance
 Lighthouse Score: 95+ across all metrics
 First Contentful Paint: < 1.5s
 Time to Interactive: < 2.5s
 Bundle Size: Optimized with tree-shaking
 Caching Strategy: Efficient service worker implementation
+
 🔧 Installation & Development
 # Clone repository
 git clone https://github.com/yourusername/wimbledon-mosque-prayer-times.git
@@ -87,11 +94,13 @@ Accurate prayer time calculations
 Seasonal adjustments (Summer/Winter time)
 Special Jumuah scheduling
 Jamat time specifications
+
 🌐 Browser Support
 Chrome/Edge: Full PWA support with install prompts
 Safari: iOS home screen installation
 Firefox: Basic PWA functionality
 Mobile Browsers: Optimized responsive experience
+
 🚀 Deployment
 Deployed on Vercel with:
 
@@ -99,12 +108,14 @@ Automatic deployments from main branch
 Edge runtime optimization
 Global CDN distribution
 Custom domain configuration
+
 📈 Future Enhancements
  Push notification system for prayer reminders
  Qibla direction compass
  Islamic calendar integration
  Multi-language support
  Prayer time calculation API
+
 🤝 Contributing
 Contributions welcome! Please read our contributing guidelines and submit pull requests for any improvements.
 
